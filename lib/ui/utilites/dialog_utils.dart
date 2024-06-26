@@ -27,12 +27,14 @@ void showErrorDialog(BuildContext context, String message) {
       barrierDismissible: false,
       builder: (_) {
         return AlertDialog(
-          title: Text("Error!"),
+          title: const Text("Error!"),
           content: Text(message),
           actions: [
-            TextButton(onPressed: (){
-              Navigator.pop(context);
-            }, child: Text("OK"))
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("OK"))
           ],
         );
       });

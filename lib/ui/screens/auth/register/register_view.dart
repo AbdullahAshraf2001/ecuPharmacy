@@ -13,7 +13,10 @@ class RegisterScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+
+  RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,71 +30,77 @@ class RegisterScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-
-
                 Row(
                   children: [
                     InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, Login.routeName);
                       },
-                      child: Icon(CupertinoIcons.back),
+                      child: const Icon(CupertinoIcons.back),
                     ),
-
-                    SizedBox(width: MediaQuery.of(context).size.width*.3,),
-                    Text(
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * .3,
+                    ),
+                    const Text(
                       "Sign Up",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
-
-
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 CustomTextFormField(
                   hintText: 'Enter your name',
                   controller: nameController,
-                  validator: (value) => value!.isEmpty ? 'Name cannot be empty' : null,
+                  validator: (value) =>
+                      value!.isEmpty ? 'Name cannot be empty' : null,
                   type: TextInputType.name,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 CustomTextFormField(
                   hintText: 'Enter your email',
                   controller: emailController,
-                  validator: (value) => value!.isEmpty ? 'Email cannot be empty' : null,
+                  validator: (value) =>
+                      value!.isEmpty ? 'Email cannot be empty' : null,
                   type: TextInputType.emailAddress,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 CustomTextFormField(
                   hintText: 'Enter your Phone number',
                   controller: phoneController,
-                  validator: (value) => value!.isEmpty ? 'Phone number cannot be empty' : null,
+                  validator: (value) =>
+                      value!.isEmpty ? 'Phone number cannot be empty' : null,
                   type: TextInputType.phone,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 CustomTextFormField(
                   hintText: 'Enter your password',
                   isPassword: true,
                   controller: passwordController,
-                  validator: (value) => value!.isEmpty ? 'Password cannot be empty' : null,
+                  validator: (value) =>
+                      value!.isEmpty ? 'Password cannot be empty' : null,
                   type: TextInputType.text,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 CustomTextFormField(
                   hintText: 'Confirm password',
                   isPassword: true,
                   controller: confirmPasswordController,
-                  validator: (value) => value!.isEmpty ? 'Confirm password cannot be empty' : null,
+                  validator: (value) => value!.isEmpty
+                      ? 'Confirm password cannot be empty'
+                      : null,
                   type: TextInputType.text,
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height*.2,),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .2,
+                ),
                 CustomButtomWidget(
                   title: "Sign Up",
                   onPressed: () {
                     Navigator.pushNamed(context, HomeScreen.routeName);
                   },
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
               ],
             ),
           ),

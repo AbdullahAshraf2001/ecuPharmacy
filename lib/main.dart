@@ -1,4 +1,3 @@
-import 'package:ecu/ui/screens/home/tabs/main_screen/main_screen.dart';
 import 'package:ecu/ui/screens/home/tabs/medicine_screen/medicine_screen.dart';
 import 'package:ecu/ui/screens/home/tabs/profile_screen/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +18,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        SplashScreen.routeName: (_) => SplashScreen(),
+        SplashScreen.routeName: (_) => const SplashScreen(),
         RegisterScreen.routeName: (_) => RegisterScreen(),
-        MedicineScreen.routeName: (_) => MedicineScreen(),
-        ProfileScreen.routeName: (_) => ProfileScreen(),
-        HomeScreen.routeName: (_) => HomeScreen(),
-        Login.routeName: (_) => Login(),
+        MedicineScreen.routeName: (_) => const MedicineScreen(),
+        ProfileScreen.routeName: (_) => const ProfileScreen(),
+        HomeScreen.routeName: (_) => const HomeScreen(),
+        Login.routeName: (_) => const Login(),
       },
       initialRoute: SplashScreen.routeName,
     );

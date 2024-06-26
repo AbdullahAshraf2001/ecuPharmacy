@@ -11,14 +11,14 @@ class DescriptionScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       appBar: AppBar(centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text("Description", style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Description", style: TextStyle(fontWeight: FontWeight.bold),),
         automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 26,vertical: 18),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 26,vertical: 18),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -27,8 +27,8 @@ class DescriptionScreen extends StatelessWidget {
               ),
             ),
             Image.asset(AppAssets.arrowTransfer),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 26,vertical: 18),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 26,vertical: 18),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),

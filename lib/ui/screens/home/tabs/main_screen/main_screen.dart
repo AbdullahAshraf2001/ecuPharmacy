@@ -186,27 +186,24 @@ class MainScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(child: Image.asset(AppAssets.doctorImage)),
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * .6,
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    child: const Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                            "The Impact of COVID-19 on Healthcare Systems"),
-                                        Text(
-                                          "Jun 10, 2023 5min read",
-                                          style:
-                                              TextStyle(color: AppColors.grey),
-                                        ),
-                                      ],
-                                    ),
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                      Text(
+                                        "Jun 10, 2023 5min read",
+                                        style: TextStyle(color: AppColors.grey),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -230,27 +227,24 @@ class MainScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(child: Image.asset(AppAssets.doctorImage)),
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * .6,
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    child: const Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                            "The Impact of COVID-19 on Healthcare Systems"),
-                                        Text(
-                                          "Jun 10, 2023 5min read",
-                                          style:
-                                              TextStyle(color: AppColors.grey),
-                                        ),
-                                      ],
-                                    ),
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                      Text(
+                                        "Jun 10, 2023 5min read",
+                                        style: TextStyle(color: AppColors.grey),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -274,27 +268,24 @@ class MainScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(child: Image.asset(AppAssets.doctorImage)),
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * .6,
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    child: const Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                            "The Impact of COVID-19 on Healthcare Systems"),
-                                        Text(
-                                          "Jun 10, 2023 5min read",
-                                          style:
-                                              TextStyle(color: AppColors.grey),
-                                        ),
-                                      ],
-                                    ),
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                      Text(
+                                        "Jun 10, 2023 5min read",
+                                        style: TextStyle(color: AppColors.grey),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -318,27 +309,24 @@ class MainScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(child: Image.asset(AppAssets.doctorImage)),
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width * .6,
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    child: const Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                            "The Impact of COVID-19 on Healthcare Systems"),
-                                        Text(
-                                          "Jun 10, 2023 5min read",
-                                          style:
-                                              TextStyle(color: AppColors.grey),
-                                        ),
-                                      ],
-                                    ),
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                      Text(
+                                        "Jun 10, 2023 5min read",
+                                        style: TextStyle(color: AppColors.grey),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],

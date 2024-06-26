@@ -6,6 +6,8 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.red,);
+    return const Scaffold(
+      backgroundColor: Colors.red,
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../utilites/app_assets.dart';
 import '../auth/login/login_view.dart';
 
@@ -12,13 +13,17 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2,), (){
+    Future.delayed(
+        const Duration(
+          seconds: 2,
+        ), () {
       Navigator.pushNamed(context, Login.routeName);
-    }
-    );
+    });
   }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(

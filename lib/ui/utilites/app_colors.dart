@@ -1,7 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
-abstract class AppColors{
+abstract class AppColors {
   static const Color primary = Color(0xffB11E34);
   static const Color accent = Color(0xffddeada);
   static const Color white = Colors.white;

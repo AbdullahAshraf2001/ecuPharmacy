@@ -7,6 +7,8 @@ import '../../../widgets/custom_text_form_field.dart';
 class Login extends StatelessWidget {
   static const routeName = "login";
 
+  const Login({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +38,7 @@ class Login extends StatelessWidget {
                     if(!emailValid){
                       return "Email format is not valid";
                     }
+                    return null;
                   },
                   controller: TextEditingController(),
                   type: TextInputType.emailAddress,
@@ -50,6 +53,7 @@ class Login extends StatelessWidget {
                     if(text.length < 6){
                       return "Invalid phone number";
                     }
+                    return null;
                   },
                   isPassword: true,
                   controller: TextEditingController(),
