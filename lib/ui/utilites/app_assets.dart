@@ -11,4 +11,6 @@ abstract class AppAssets{
   static const String maskIC = "${baseImagesPath}Mask.png";
   static const String arrowTransfer = "${baseImagesPath}arrow-transfer.png";
   static const String yinYang = "${baseImagesPath}yin-yang.png";
+  static const String glibenclamide = "${baseImagesPath}download.jpeg";
+  static const String noData = "${baseImagesPath}notFound.png";
 }

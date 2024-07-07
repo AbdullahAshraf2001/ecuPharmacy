@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 import '../../../widgets/custom_text_form_field.dart';
 class Login extends StatelessWidget {
   static const routeName = "login";
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
-  const Login({super.key});
+  Login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,37 +29,20 @@ class Login extends StatelessWidget {
                 ),
                 const SizedBox(height: 30,),
                 CustomTextFormField(
-                  hintText: "Enter Your Email Address",
-                  validator: (text) {
-                    if (text == null || text.trim().isEmpty) {
-                      return "Please Enter Your Email";
-                    }
-                    var emailValid = RegExp(
-                      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                    .hasMatch(text);
-                    if(!emailValid){
-                      return "Email format is not valid";
-                    }
-                    return null;
-                  },
-                  controller: TextEditingController(),
+                  hintText: 'Enter your email',
+                  controller: emailController,
+                  validator: (value) =>
+                  value!.isEmpty ? 'Email cannot be empty' : null,
                   type: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 25,),
                 CustomTextFormField(
-                  hintText: "Enter Your Password",
-                  validator: (text) {
-                    if (text == null || text.trim().isEmpty) {
-                      return "Please Enter Your Password";
-                    }
-                    if(text.length < 6){
-                      return "Invalid phone number";
-                    }
-                    return null;
-                  },
+                  hintText: 'Enter your password',
                   isPassword: true,
-                  controller: TextEditingController(),
-                  type: TextInputType.visiblePassword,
+                  controller: passwordController,
+                  validator: (value) =>
+                  value!.isEmpty ? 'Password cannot be empty' : null,
+                  type: TextInputType.text,
                 ),
                 Align(
                   alignment: Alignment.centerRight,

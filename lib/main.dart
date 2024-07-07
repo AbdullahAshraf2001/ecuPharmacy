@@ -1,7 +1,6 @@
 import 'package:ecu/ui/screens/home/tabs/medicine_screen/medicine_screen.dart';
 import 'package:ecu/ui/screens/home/tabs/profile_screen/profile_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'ui/screens/auth/login/login_view.dart';
 import 'ui/screens/auth/register/register_view.dart';
 import 'ui/screens/home/home_screen.dart';
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
         MedicineScreen.routeName: (_) => const MedicineScreen(),
         ProfileScreen.routeName: (_) => const ProfileScreen(),
         HomeScreen.routeName: (_) => const HomeScreen(),
-        Login.routeName: (_) => const Login(),
+        Login.routeName: (_) => Login(),
       },
       initialRoute: SplashScreen.routeName,
     );

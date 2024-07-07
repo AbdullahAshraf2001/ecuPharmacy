@@ -1,3 +1,4 @@
+import 'package:ecu/ui/screens/home/tabs/medicine_screen/medicine_screen.dart';
 import 'package:ecu/ui/utilites/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentTabIndex = 0;
 
   List<Widget> tabs = [
-    const MainScreen(),
+    MainScreen(),
+    const MedicineScreen(),
     const DescriptionScreen(),
     const ProfileScreen(),
   ];
@@ -32,11 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget buildBottomNavigationBar() => Theme(
-        data: Theme.of(context)
-            .copyWith(canvasColor: Theme.of(context).primaryColor),
+        data:ThemeData.light(),
         child: BottomNavigationBar(
           backgroundColor: AppColors.white,
           selectedItemColor: AppColors.primary,
+          unselectedItemColor: AppColors.grey,
+          showUnselectedLabels: true,
           currentIndex: currentTabIndex,
           onTap: (index) {
             currentTabIndex = index;
@@ -46,6 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.home_filled),
               label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.medical_services_sharp),
+              label: "Medicine",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.note_alt_outlined),

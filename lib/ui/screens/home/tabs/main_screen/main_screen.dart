@@ -4,8 +4,20 @@ import 'package:ecu/ui/utilites/app_assets.dart';
 import 'package:ecu/ui/utilites/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class MainScreen extends StatefulWidget {
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  List<bool> isBookMarkedList =
+      List.generate(5, (index) => false); //3dd el list el article
+
+  void _toggleBookmark(int index) {
+    setState(() {
+      isBookMarkedList[index] = !isBookMarkedList[index];
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,35 +101,37 @@ class MainScreen extends StatelessWidget {
             ),
             Container(
                 margin: const EdgeInsets.only(top: 12),
-                child: Row(
-                  children: [
-                    Expanded(
-                        child: Column(
-                      children: [
-                        Image.asset(AppAssets.doctorIC),
-                        const Text("Top Doctors")
-                      ],
-                    )),
-                    Expanded(
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.pushNamed(
-                                  context, MedicineScreen.routeName);
-                            },
-                            child: Column(
-                              children: [
-                                Image.asset(AppAssets.medicineIC),
-                                const Text("Medicine")
-                              ],
-                            ))),
-                    Expanded(
-                        child: Column(
-                      children: [
-                        Image.asset(AppAssets.searchIC),
-                        const Text("Pharmacy")
-                      ],
-                    )),
-                  ],
+                child: Padding(
+                  padding: MediaQuery.of(context).padding * 0.8,
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, MedicineScreen.routeName);
+                              },
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.medical_information,
+                                    color: AppColors.primary,
+                                  ),
+                                  const Text("Medicine")
+                                ],
+                              ))),
+                      Expanded(
+                          child: Column(
+                        children: [
+                          Icon(
+                            Icons.favorite,
+                            color: AppColors.primary,
+                          ),
+                          const Text("Favourite Medicine")
+                        ],
+                      )),
+                    ],
+                  ),
                 )),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -157,9 +171,9 @@ class MainScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                          "The 25 Healthiest Fruits You Can Eat, According to a Nutritionist"),
+                                          "Combining flavonoid with vitamin B6 may help preserve cognitive function"),
                                       Text(
-                                        "Jun 10, 2023 5min read",
+                                        "JUNE 27, 2024",
                                         style: TextStyle(color: AppColors.grey),
                                       ),
                                     ],
@@ -169,9 +183,17 @@ class MainScreen extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(Icons.bookmark),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => _toggleBookmark(0),
+                              // Pass the index of the article
+                              child: Icon(
+                                isBookMarkedList[0]
+                                    ? Icons.bookmark
+                                    : Icons.bookmark_border,
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -198,9 +220,9 @@ class MainScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                          "Could microplastics found in penises affect fertility and sperm count?"),
                                       Text(
-                                        "Jun 10, 2023 5min read",
+                                        "JUNE 26, 2024",
                                         style: TextStyle(color: AppColors.grey),
                                       ),
                                     ],
@@ -210,9 +232,17 @@ class MainScreen extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(Icons.bookmark_border),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => _toggleBookmark(1),
+                              // Pass the index of the article
+                              child: Icon(
+                                isBookMarkedList[1]
+                                    ? Icons.bookmark
+                                    : Icons.bookmark_border,
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -239,9 +269,9 @@ class MainScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                          "Weight loss: New dietary guidelines for people taking Wegovy, Ozempic"),
                                       Text(
-                                        "Jun 10, 2023 5min read",
+                                        "JUNE 26, 2024",
                                         style: TextStyle(color: AppColors.grey),
                                       ),
                                     ],
@@ -251,9 +281,17 @@ class MainScreen extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(Icons.bookmark_border),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => _toggleBookmark(2),
+                              // Pass the index of the article
+                              child: Icon(
+                                isBookMarkedList[2]
+                                    ? Icons.bookmark
+                                    : Icons.bookmark_border,
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -280,9 +318,9 @@ class MainScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                          "Missing a specific blood group may genetically predispose people to obesity"),
                                       Text(
-                                        "Jun 10, 2023 5min read",
+                                        "JUNE 26, 2024",
                                         style: TextStyle(color: AppColors.grey),
                                       ),
                                     ],
@@ -292,9 +330,17 @@ class MainScreen extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(Icons.bookmark_border),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => _toggleBookmark(3),
+                              // Pass the index of the article
+                              child: Icon(
+                                isBookMarkedList[3]
+                                    ? Icons.bookmark
+                                    : Icons.bookmark_border,
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -321,9 +367,9 @@ class MainScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                          "The Impact of COVID-19 on Healthcare Systems"),
+                                          "Peptide treatment could reverse cognitive decline in Alzheimer's disease"),
                                       Text(
-                                        "Jun 10, 2023 5min read",
+                                        "JUNE 26, 2024",
                                         style: TextStyle(color: AppColors.grey),
                                       ),
                                     ],
@@ -333,9 +379,17 @@ class MainScreen extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Icon(Icons.bookmark_border),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              onTap: () => _toggleBookmark(4),
+                              // Pass the index of the article
+                              child: Icon(
+                                isBookMarkedList[4]
+                                    ? Icons.bookmark
+                                    : Icons.bookmark_border,
+                              ),
+                            ),
                           )
                         ],
                       ),
